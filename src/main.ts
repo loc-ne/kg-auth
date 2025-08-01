@@ -20,7 +20,7 @@ app.enableCors({
     transform: true,
   }));
   
-  await app.listen(process.env.PORT ||4001);
-  console.log('Auth service is running on http://localhost:4001');
+  await app.listen(process.env.PORT || 4001, '0.0.0.0');
+  console.log(`Auth service is running on http://0.0.0.0:${process.env.PORT || 4001}`);
 }
 bootstrap();
