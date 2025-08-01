@@ -27,6 +27,7 @@ export class AuthController {
       sameSite: 'none',
       maxAge: 15 * 60 * 1000,
       path: '/',
+      domain: '.onrender.com',
     });
 
     res.cookie('refresh_token', result.refresh_token, {
@@ -37,6 +38,7 @@ export class AuthController {
       sameSite: 'none',
       maxAge: 7 * 24 * 60 * 60 * 1000,
       path: '/',
+      domain: '.onrender.com',
     });
 
     return {
@@ -61,6 +63,7 @@ export class AuthController {
       sameSite: 'none',
       maxAge: 15 * 60 * 1000,
       path: '/',
+      domain: '.onrender.com',
     });
 
 
@@ -72,6 +75,7 @@ export class AuthController {
       // sameSite: 'lax',
       maxAge: 7 * 24 * 60 * 60 * 1000,
       path: '/',
+      domain: '.onrender.com',
     });
 
     return {
