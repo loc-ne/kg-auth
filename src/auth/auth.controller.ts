@@ -21,17 +21,21 @@ export class AuthController {
     // Set httpOnly cookie cho access_token
     res.cookie('access_token', result.access_token, {
       httpOnly: true,
-      secure: false,
-      sameSite: 'lax',
-      maxAge: 15 * 60 * 1000, 
+      // secure: false,
+      // sameSite: 'lax',
+      secure: true,           
+      sameSite: 'none',
+      maxAge: 15 * 60 * 1000,
       path: '/',
     });
 
     res.cookie('refresh_token', result.refresh_token, {
       httpOnly: true,
-      secure: false,
-      sameSite: 'lax',
-      maxAge: 7 * 24 * 60 * 60 * 1000, 
+      // secure: false,
+      // sameSite: 'lax',
+      secure: true,           
+      sameSite: 'none',
+      maxAge: 7 * 24 * 60 * 60 * 1000,
       path: '/',
     });
 
@@ -53,7 +57,7 @@ export class AuthController {
       httpOnly: true,
       secure: false,
       sameSite: 'lax',
-      maxAge: 15 * 60 * 1000, 
+      maxAge: 15 * 60 * 1000,
       path: '/',
     });
 
@@ -62,7 +66,7 @@ export class AuthController {
       httpOnly: true,
       secure: false,
       sameSite: 'lax',
-      maxAge: 7 * 24 * 60 * 60 * 1000, 
+      maxAge: 7 * 24 * 60 * 60 * 1000,
       path: '/',
     });
 
